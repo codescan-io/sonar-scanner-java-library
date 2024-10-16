@@ -9,7 +9,7 @@
 
   <groupId>org.sonarsource.scanner.api</groupId>
   <artifactId>sonar-scanner-api-parent</artifactId>
-  <version>2.16.3-SNAPSHOT</version>
+  <version>2.16.3-CODESCAN</version>
   <packaging>pom</packaging>
   <name>SonarQube Scanner API - Parent</name>
   <description>API used by all SonarQube Scanners (Maven, Gradle, Ant, CLI)</description>
@@ -53,7 +53,7 @@
 
     <!-- used for deployment to SonarSource Artifactory -->
     <gitRepositoryName>sonar-scanner-api</gitRepositoryName>
-    <okhttp.version>3.14.2</okhttp.version>
+    <okhttp.version>4.12.0</okhttp.version>
     <mockito.version>2.23.4</mockito.version>
   </properties>
 
@@ -154,4 +154,14 @@
     </profile>
   </profiles>
 
+  <distributionManagement>
+    <repository>
+      <id>libs-release</id>
+      <url>https://artifactory.autorabit.com/artifactory/libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>libs-snapshots</id>
+      <url>https://artifactory.autorabit.com/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
